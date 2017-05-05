@@ -6,3 +6,5 @@ log "Welcome to Chef, #{node["starter_name"]}!" do
 end
 
 # For more information, see the documentation: https://docs.chef.io/essentials_cookbook_recipes.html
+package 'httpd' do
+end
