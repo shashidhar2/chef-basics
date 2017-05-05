@@ -7,6 +7,7 @@
 if node['platform_family'] == "rhel"
 package = "httpd"
 else package = 'apache2'
+end
 
 package 'apache2' do
 package_name package
@@ -15,4 +16,4 @@ end
 service 'httpd' do
 action [:start, :enable]
 end
-include_recipe 'apache::website'
+include_recipe 'apache::motd'
